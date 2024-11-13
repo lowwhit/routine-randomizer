@@ -64,5 +64,203 @@
             "time": "15:40 - 20:40",
             "task": "Free Time"
         }
+    ],
+    [
+        {
+            "time": "06:00 - 07:00",
+            "task": "Algorithms"
+        },
+        {
+            "time": "07:00 - 07:10",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:10 - 08:10",
+            "task": "Algorithms"
+        },
+        {
+            "time": "08:10 - 08:20",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "08:20 - 09:20",
+            "task": "Algorithms"
+        },
+        {
+            "time": "09:20 - 09:35",
+            "task": "Free Time"
+        },
+        {
+            "time": "09:35 - 10:35",
+            "task": "Gym"
+        },
+        {
+            "time": "10:35 - 10:45",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "10:45 - 11:45",
+            "task": "Gym"
+        },
+        {
+            "time": "11:45 - 12:45",
+            "task": "FAI"
+        },
+        {
+            "time": "12:45 - 12:55",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "12:30 - 13:30",
+            "task": "Lunch Break"
+        },
+        {
+            "time": "13:30 - 14:30",
+            "task": "FAI"
+        },
+        {
+            "time": "14:30 - 14:40",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "14:40 - 15:40",
+            "task": "FAI"
+        },
+        {
+            "time": "15:40 - 20:40",
+            "task": "Free Time"
+        }
+    ],
+    [
+        {
+            "time": "06:00 - 07:00",
+            "task": "Algorithms"
+        },
+        {
+            "time": "07:00 - 07:10",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:10 - 08:10",
+            "task": "Algorithms"
+        },
+        {
+            "time": "08:10 - 08:20",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "08:20 - 09:20",
+            "task": "Algorithms"
+        },
+        {
+            "time": "09:20 - 09:35",
+            "task": "Free Time"
+        },
+        {
+            "time": "09:35 - 10:35",
+            "task": "Gym"
+        },
+        {
+            "time": "10:35 - 10:45",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "10:45 - 11:45",
+            "task": "Gym"
+        },
+        {
+            "time": "11:45 - 12:45",
+            "task": "FAI"
+        },
+        {
+            "time": "12:45 - 12:55",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "12:30 - 13:30",
+            "task": "Lunch Break"
+        },
+        {
+            "time": "13:30 - 14:30",
+            "task": "FAI"
+        },
+        {
+            "time": "14:30 - 14:40",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "14:40 - 15:40",
+            "task": "FAI"
+        },
+        {
+            "time": "15:40 - 20:40",
+            "task": "Free Time"
+        }
+    ],
+    [
+        {
+            "time": "06:00 - 07:00",
+            "task": "Algorithms"
+        },
+        {
+            "time": "07:00 - 07:10",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:10 - 08:10",
+            "task": "Algorithms"
+        },
+        {
+            "time": "08:10 - 08:20",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "08:20 - 09:20",
+            "task": "Algorithms"
+        },
+        {
+            "time": "09:20 - 09:35",
+            "task": "Free Time"
+        },
+        {
+            "time": "09:35 - 10:35",
+            "task": "Gym"
+        },
+        {
+            "time": "10:35 - 10:45",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "10:45 - 11:45",
+            "task": "Gym"
+        },
+        {
+            "time": "11:45 - 12:45",
+            "task": "FAI"
+        },
+        {
+            "time": "12:45 - 12:55",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "12:30 - 13:30",
+            "task": "Lunch Break"
+        },
+        {
+            "time": "13:30 - 14:30",
+            "task": "FAI"
+        },
+        {
+            "time": "14:30 - 14:40",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "14:40 - 15:40",
+            "task": "FAI"
+        },
+        {
+            "time": "15:40 - 20:40",
+            "task": "Free Time"
+        }
     ]
 ]
