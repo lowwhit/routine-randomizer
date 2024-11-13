@@ -1,8 +1,12 @@
 import datetime
 
 def add_minutes(time, minutes):
-    """Helper function to add minutes to a time object."""
-    dt = datetime.datetime.combine(datetime.date.today(), datetime.time(time[0], time[1]))
+    """Helper function to add minutes to a time object, supporting string time formats."""
+    # Check if `time` is a string in "HH:MM" format and parse it if necessary
+    if isinstance(time, str):
+        time = datetime.datetime.strptime(time, "%H:%M").time()
+        
+    dt = datetime.datetime.combine(datetime.date.today(), time)
     dt += datetime.timedelta(minutes=minutes)
     return dt.time().strftime("%H:%M")
 
