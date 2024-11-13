@@ -19,12 +19,14 @@ A simple Python program that helps you create a balanced daily routine based on 
 ## 🛠️ Setup and Usage
 
 ### Prerequisites
-- **Python 3.x**: Make sure Python is installed on your system.
+- **Python 3.9**: Make sure Python is installed on your system.
 
 ### Installation
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/routine-randomizer.git
+   git clone https://github.com/lowwhit/routine-randomizer.git
    cd routine-randomizer
 
-
+2. Run the program :
+    ```bash
+    python routine_randomizer.py
