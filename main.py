@@ -110,43 +110,30 @@ def print_routine(routine):
         print(f"| {i:<3} | {entry['time']:<19} | {entry['task']:<20} |")
         print("+-----+---------------------+----------------------+")
 
-def save_routine(routine, iteration):
-    """Save each iteration of the routine to the file."""
-    with open("routine.txt", "a") as file:
-        file.write(f"\nIteration {iteration}:\n")
-        for entry in routine:
-            file.write(f"{entry['time']} - {entry['task']}\n")
-        file.write("\n" + "=" * 40 + "\n")
-    print(f"Iteration {iteration} saved to 'routine.txt'.")
-
-def load_routine():
+def save_routine(routine):
+    """Append each routine as a new entry in a JSON file."""
+    routines = []
     if os.path.exists("routine.txt"):
         with open("routine.txt", "r") as file:
-            routine = json.load(file)
-            print_routine(routine)
-            ask_for_feedback(routine)
+            try:
+                routines = json.load(file)
+            except json.JSONDecodeError:
+                pass  # Ignore if the file is empty
+
+    routines.append(routine)
+
+    with open("routine.txt", "w") as file:
+        json.dump(routines, file, indent=4)
+    print("Routine saved to 'routine.txt'.")
+
+def load_routine():
+    """Load routines from JSON file and print the latest one."""
+    if os.path.exists("routine.txt"):
+        with open("routine.txt", "r") as file:
+            routines = json.load(file)
+            print_routine(routines[-1])  # Print the latest routine
     else:
         print("No routine file found. Create a new routine first.")
-
-def ask_for_feedback(routine):
-    print("\nPlease provide feedback for each task.")
-    feedback = []
-
-    for entry in routine:
-        if entry["task"] not in ["Lunch Break", "10-Minute Break", "Free Time"]:
-            rating = int(input(f"Rate the placement of '{entry['task']}' (1-5): "))
-            feedback.append({"task": entry["task"], "rating": rating})
-
-    improved_routine = []
-    for entry in routine:
-        if entry["task"] in [f["task"] for f in feedback if f["rating"] >= 4]:
-            improved_routine.append(entry)
-        elif entry["task"] not in ["Lunch Break", "10-Minute Break", "Free Time"]:
-            improved_routine.append({"time": entry["time"], "task": "Free Time"})
-        else:
-            improved_routine.append(entry)
-
-    save_routine(improved_routine, "Feedback Adjusted")
 
 def main():
     print("Routine Randomizer")
@@ -155,9 +142,7 @@ def main():
     if mode == 1:
         routine = create_routine()
         print_routine(routine)
-        iteration = 1 if not os.path.exists("routine.txt") else sum(1 for line in open("routine.txt") if line.startswith("Iteration")) + 1
-        save_routine(routine, iteration)
-        ask_for_feedback(routine)
+        save_routine(routine)
     elif mode == 2:
         load_routine()
     else:
