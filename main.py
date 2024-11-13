@@ -64,16 +64,23 @@ def create_routine():
     return schedule
 
 def print_routine(routine):
+    """Prints the routine in a MySQL-style table format."""
     print("\nYour Daily Routine:")
-    print(f"{'Time':<20} {'Task':<20}")
-    print("-" * 40)
+    print("+---------------------+----------------------+")
+    print("|       Time         |        Task          |")
+    print("+---------------------+----------------------+")
     for entry in routine:
-        print(f"{entry['time']:<20} {entry['task']:<20}")
+        print(f"| {entry['time']:<19} | {entry['task']:<20} |")
+        print("+---------------------+----------------------+")
 
-def save_routine(routine):
-    with open("routine.txt", "w") as file:
-        json.dump(routine, file)
-    print("Routine saved to 'routine.txt'.")
+def save_routine(routine, iteration):
+    """Save each iteration of the routine to the file."""
+    with open("routine.txt", "a") as file:
+        file.write(f"\nIteration {iteration}:\n")
+        for entry in routine:
+            file.write(f"{entry['time']} - {entry['task']}\n")
+        file.write("\n" + "=" * 40 + "\n")
+    print(f"Iteration {iteration} saved to 'routine.txt'.")
 
 def load_routine():
     if os.path.exists("routine.txt"):
@@ -102,7 +109,7 @@ def ask_for_feedback(routine):
         else:
             improved_routine.append(entry)
 
-    save_routine(improved_routine)
+    save_routine(improved_routine, "Feedback Adjusted")
 
 def main():
     print("Routine Randomizer")
@@ -111,7 +118,8 @@ def main():
     if mode == 1:
         routine = create_routine()
         print_routine(routine)
-        save_routine(routine)
+        iteration = 1 if not os.path.exists("routine.txt") else sum(1 for line in open("routine.txt") if line.startswith("Iteration")) + 1
+        save_routine(routine, iteration)
         ask_for_feedback(routine)
     elif mode == 2:
         load_routine()
