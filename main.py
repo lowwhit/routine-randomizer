@@ -61,17 +61,54 @@ def create_routine():
             schedule.append({"time": f"{current_time.strftime('%H:%M')} - {end_time.strftime('%H:%M')}", "task": "Free Time"})
             current_time = end_time
 
-    return schedule
+    return merge_free_time_slots(schedule)
+
+def merge_free_time_slots(schedule):
+    """Merges continuous 'Free Time' slots into one if they exceed 2 hours."""
+    merged_schedule = []
+    free_start = None
+    free_end = None
+
+    for entry in schedule:
+        if entry["task"] == "Free Time":
+            if not free_start:
+                free_start = entry["time"].split(" - ")[0]
+            free_end = entry["time"].split(" - ")[1]
+        else:
+            if free_start and free_end:
+                start_dt = datetime.datetime.strptime(free_start, "%H:%M")
+                end_dt = datetime.datetime.strptime(free_end, "%H:%M")
+                duration = (end_dt - start_dt).total_seconds() / 3600
+
+                if duration > 2:
+                    merged_schedule.append({"time": f"{free_start} - {free_end}", "task": "Free Time"})
+                else:
+                    merged_schedule.extend([{"time": f"{free_start} - {free_end}", "task": "Free Time"}])
+                free_start, free_end = None, None
+
+            merged_schedule.append(entry)
+
+    if free_start and free_end:
+        start_dt = datetime.datetime.strptime(free_start, "%H:%M")
+        end_dt = datetime.datetime.strptime(free_end, "%H:%M")
+        duration = (end_dt - start_dt).total_seconds() / 3600
+        if duration > 2:
+            merged_schedule.append({"time": f"{free_start} - {free_end}", "task": "Free Time"})
+        else:
+            merged_schedule.extend([{"time": f"{free_start} - {free_end}", "task": "Free Time"}])
+
+    return merged_schedule
 
 def print_routine(routine):
-    """Prints the routine in a MySQL-style table format."""
+    """Prints the routine in a MySQL-style table format with serial numbers and merged free time slots."""
     print("\nYour Daily Routine:")
-    print("+---------------------+----------------------+")
-    print("|       Time         |        Task          |")
-    print("+---------------------+----------------------+")
-    for entry in routine:
-        print(f"| {entry['time']:<19} | {entry['task']:<20} |")
-        print("+---------------------+----------------------+")
+    print("+-----+---------------------+----------------------+")
+    print("| No. |       Time         |        Task          |")
+    print("+-----+---------------------+----------------------+")
+
+    for i, entry in enumerate(routine, start=1):
+        print(f"| {i:<3} | {entry['time']:<19} | {entry['task']:<20} |")
+        print("+-----+---------------------+----------------------+")
 
 def save_routine(routine, iteration):
     """Save each iteration of the routine to the file."""
