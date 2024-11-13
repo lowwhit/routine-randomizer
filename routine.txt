@@ -262,5 +262,163 @@
             "time": "15:40 - 20:40",
             "task": "Free Time"
         }
+    ],
+    [
+        {
+            "time": "06:00 - 07:00",
+            "task": "Algorithms"
+        },
+        {
+            "time": "07:00 - 07:10",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:10 - 08:10",
+            "task": "Algorithms"
+        },
+        {
+            "time": "08:10 - 08:20",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "08:20 - 09:20",
+            "task": "Algorithms"
+        },
+        {
+            "time": "09:20 - 09:35",
+            "task": "Free Time"
+        },
+        {
+            "time": "09:35 - 10:35",
+            "task": "Gym"
+        },
+        {
+            "time": "10:35 - 10:45",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "10:45 - 11:45",
+            "task": "Gym"
+        },
+        {
+            "time": "14:00 - 15:00",
+            "task": "FAI"
+        },
+        {
+            "time": "12:45 - 12:55",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "12:30 - 13:30",
+            "task": "Lunch Break"
+        },
+        {
+            "time": "08:00 - 09:00",
+            "task": "FAI"
+        },
+        {
+            "time": "14:30 - 14:40",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:00 - 08:00",
+            "task": "FAI"
+        },
+        {
+            "time": "15:40 - 20:40",
+            "task": "Free Time"
+        }
+    ],
+    [
+        {
+            "time": "06:00 - 07:00",
+            "task": "5800"
+        },
+        {
+            "time": "07:00 - 07:10",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:10 - 08:10",
+            "task": "5800"
+        },
+        {
+            "time": "08:10 - 08:20",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "08:20 - 09:20",
+            "task": "5800"
+        },
+        {
+            "time": "09:20 - 10:20",
+            "task": "5100"
+        },
+        {
+            "time": "10:20 - 10:30",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "10:30 - 11:30",
+            "task": "5100"
+        },
+        {
+            "time": "11:30 - 12:30",
+            "task": "Free Time"
+        },
+        {
+            "time": "12:30 - 13:30",
+            "task": "Lunch Break"
+        },
+        {
+            "time": "13:30 - 20:30",
+            "task": "Free Time"
+        }
+    ],
+    [
+        {
+            "time": "06:00 - 07:00",
+            "task": "5800"
+        },
+        {
+            "time": "07:00 - 07:10",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "07:10 - 08:10",
+            "task": "5800"
+        },
+        {
+            "time": "08:10 - 08:20",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "08:20 - 09:20",
+            "task": "5800"
+        },
+        {
+            "time": "09:20 - 10:20",
+            "task": "5100"
+        },
+        {
+            "time": "10:20 - 10:30",
+            "task": "10-Minute Break"
+        },
+        {
+            "time": "10:30 - 11:30",
+            "task": "5100"
+        },
+        {
+            "time": "11:30 - 12:30",
+            "task": "Free Time"
+        },
+        {
+            "time": "12:30 - 13:30",
+            "task": "Lunch Break"
+        },
+        {
+            "time": "13:30 - 20:30",
+            "task": "Free Time"
+        }
     ]
 ]
