@@ -1,32 +1,92 @@
-# 🗓️ Routine Randomizer
 
-A simple Python program that helps you create a balanced daily routine based on your tasks and priorities. The Routine Randomizer schedules tasks with breaks and lunch, while also allowing you to provide feedback to improve the routine over time using a local search approach.
+# 📅 Daily Routine Scheduler
 
-## 🚀 Features
-- **Task Scheduling**: Automatically schedules tasks based on priority and duration.
-- **Break Management**: Adds a 10-minute break after every 60 minutes of work.
-- **Lunch Break**: Fixed lunch break from 12:30 PM to 1:30 PM.
-- **Daily Timeframe**: Day starts at 6:00 AM and ends at 8:00 PM.
-- **Feedback-Based Improvement**: Allows you to rate each task's placement and improves future routines based on your feedback.
-- **Save and Load**: Save your routine to a file for later use, or load an existing routine to review and refine.
+Welcome to the **Daily Routine Scheduler**! This Python project enables you to manage and automate your daily schedule, allowing flexibility in handling different tasks like exercise, study, and leisure time. 📈🕒
 
-## 📝 How It Works
-1. **Create a New Routine**: Enter your tasks, time estimates, and priorities.
-2. **Automatic Scheduling**: The program organizes tasks into a daily routine, inserting breaks and free time where appropriate.
-3. **Feedback Loop**: After trying the routine, rate each task's placement (1-5). Tasks rated highly are retained in future routines, while low-rated ones are replaced with "Free Time."
-4. **Save & Load**: Save your daily routine to `routine.txt` for future reference, and load it up anytime to review or update based on your feedback.
+## 🌟 Features
 
-## 🛠️ Setup and Usage
+- 📑 **Routine Creation**: Generate routines and save them in a JSON format.
+- ⏰ **Task Timing**: Set specific tasks with allocated time intervals.
+- 🔍 **Local Search**: Easily search through saved routines to find specific tasks or schedules.
+- 🛠 **Utilities**: Additional utility functions for managing routines.
+
+## 📂 File Structure
+
+- `main.py` - Main entry point of the project.
+- `localsearch.py` - Module for handling search functionality.
+- `routinecreation.py` - Handles the creation and formatting of routines.
+- `utilities.py` - Utility functions used across the project.
+- `routine.txt` - JSON file containing sample routines.
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- **Python 3.9**: Make sure Python is installed on your system.
+
+- **Python 3.9**: Ensure you have Python installed on your machine.
 
 ### Installation
-1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/lowwhit/routine-randomizer.git
-   cd routine-randomizer
 
-2. Run the program :
-    ```bash
-    python routine_randomizer.py
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/lowwhit/dailyroutine-randomizer.git
+   cd routine-randomizer
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Usage
+
+1. **Run main script**: Execute `main.py` to start and test the complete functionality.
+
+   ```bash
+   python main.py
+   ```
+
+## 📜 Sample Routine Format
+
+Each routine is stored in JSON format. Here’s an example:
+
+```json
+[
+    {
+        "time": "06:00 - 07:00",
+        "task": "Algorithms"
+    },
+    {
+        "time": "07:00 - 07:10",
+        "task": "10-Minute Break"
+    },
+    {
+        "time": "09:20 - 09:35",
+        "task": "Meditate"
+    }
+]
+```
+
+## 🤖 Contributing
+
+Contributions are welcome! Feel free to submit a PR or report any issues. 
+
+1. **Fork the repository**.
+2. **Create your feature branch** (`git checkout -b feature/AmazingFeature`).
+3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`).
+4. **Push to the branch** (`git push origin feature/AmazingFeature`).
+5. **Open a Pull Request**.
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🙋‍♂️ Support
+
+If you encounter any issues or have questions, please feel free to reach out!
+
+---
+
+### 🔖 Note:
+Ensure `routine.txt` and `utilities.py` are in the same directory to enable full functionality.
