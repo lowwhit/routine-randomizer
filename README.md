@@ -13,7 +13,7 @@ Welcome to the **Daily Routine Scheduler**! This Python project enables you to m
 ## 📂 File Structure
 
 - `main.py` - Main entry point of the project.
-- `localsearch.py` - Module for handling search functionality.
+- `localsearch.py` - Module for implementing local search and get feedback on the created routine
 - `routinecreation.py` - Handles the creation and formatting of routines.
 - `utilities.py` - Utility functions used across the project.
 - `routine.txt` - JSON file containing sample routines.
